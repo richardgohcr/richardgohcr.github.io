@@ -1,6 +1,6 @@
-var liveServer = require('live-server');
+const liveServer = require('live-server');
 
-var params = {
+const params = {
     'port': 3000,
     'host': "0.0.0.0",
 	'open': false,
