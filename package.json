@@ -1,0 +1,27 @@
+{
+  "name": "richardgohcr",
+  "version": "0.0.1",
+  "description": "Richard's personal website",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass-chokidar styles/main.scss -o styles/ --output-style compressed",
+    "watch-css": "node-sass-chokidar styles/main.scss -o styles/ --watch --recursive --output-style compressed",
+    "start": "concurrently \"node live-server.js\" \"npm:watch-css\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardgohcr/richardgohcr.git"
+  },
+  "author": "Richard Goh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardgohcr/richardgohcr/issues"
+  },
+  "homepage": "https://github.com/richardgohcr/richardgohcr#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "live-server": "^1.2.1",
+    "node-sass-chokidar": "^1.4.0"
+  }
+}
