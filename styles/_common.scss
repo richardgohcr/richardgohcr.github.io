@@ -1,0 +1,14 @@
+// Common buttons
+
+.btn,
+.btn.inverse:hover {
+  color: #ffffff;
+  background-color: #00adef;
+  border-color: #00adef;
+}
+.btn:hover,
+.btn.inverse {
+  color: inherit;
+  background-color: transparent;
+  border-color: inherit;
+}
