@@ -65,22 +65,21 @@
   }
 }
 .page-banner {
-  padding: 170px 0 200px 0 ;
+  padding: 170px 0 190px 0;
   margin: auto;
   text-align: center;
-  h1{
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: capitalize;
-  }
   .hello {
     font-style: italic;
-    font-size: 18px;
+    font-size: 20px;
+    text-transform: none !important;
     font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  p, .bio {
+  .bio {
     font-style: italic;
-    font-size: 18px;
+    font-size: 20px;
+    text-transform: none !important;
+    line-height: 2rem;
   }
   .cta {
     margin-top: 30px;
@@ -93,7 +92,7 @@
   }
 }
 
-.about-me{
+.about-me {
   text-align: center;
 }
 
