@@ -2,7 +2,7 @@
 @import '_typography';
 @import '_common';
 
-.hoc {
+.width-wrapper {
   margin: auto;
 }
 
@@ -92,21 +92,31 @@
   }
 }
 
-.about-me-container {
-  border-bottom: 1px solid $page-secondary-background;
-  background-color: $white;
-}
-
-.about-me {
-  text-align: center;
+.section-container-white, .section-container-grey {
   padding: 60px 0;
-  color: rgb(47, 47, 47);
-
   h2 {
     margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: center;
     line-height: normal;
     font-weight: normal;
   }
+}
+
+.section-container-white{
+  background-color: white;
+}
+
+.section-container-grey{
+  background-color: $page-secondary-background;
+}
+
+
+
+.about-me {
+  text-align: center;
+  color: rgb(47, 47, 47);
+
   p {
     line-height: 1.6em;
     text-align: justify;
@@ -118,16 +128,8 @@
 }
 
 
-.experience-container, .education-container {
+.experience {
 
-  background-color: $page-secondary-background;
-  h2 {
-    text-align: center;
-    margin-top: 0px;
-  }
-  .experience {
-    padding: 60px 0;
-  }
   ul.timeline {
     list-style-type: none;
     position: relative;
@@ -185,11 +187,20 @@
   background-color: $white !important;
 }
 
-.projects-container{
-  background-color: $page-secondary-background;
-  .projects{
-    padding: 60px 0px;
+.projects{
+  
+  h2{
+    text-align: center;
   }
+  .row{
+    display: flex;
+    justify-content: space-around;
+  }
+  .project-item{
+    border: 1px solid red;
+    width: 48%;
+  }
+  
 }
 
 /* Media Queries
@@ -201,7 +212,7 @@
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 978px) {
-  .hoc {
+  .width-wrapper {
     max-width: 978px;
   }
 }
