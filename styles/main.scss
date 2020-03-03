@@ -99,7 +99,7 @@
 
 .about-me {
   text-align: center;
-  padding: 80px 0;
+  padding: 60px 0;
   color: rgb(47, 47, 47);
 
   h2 {
@@ -117,14 +117,16 @@
   }
 }
 
-.experience-container {
+
+.experience-container, .education-container {
+
   background-color: $page-secondary-background;
   h2 {
     text-align: center;
     margin-top: 0px;
   }
   .experience {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   ul.timeline {
     list-style-type: none;
@@ -177,6 +179,17 @@
     line-height: 1.5em;
   }
   .work-description-sub {}
+}
+
+.education-container{
+  background-color: $white !important;
+}
+
+.projects-container{
+  background-color: $page-secondary-background;
+  .projects{
+    padding: 60px 0px;
+  }
 }
 
 /* Media Queries
