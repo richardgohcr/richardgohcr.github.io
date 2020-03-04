@@ -61,16 +61,14 @@ body{
 }
 
 .page-banner-container {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: $white;
+  height: 100vh;
+  max-height: 800px;
   width: 100%;
+  display: flex; 
+  align-items: center;
+  background-color: $dark-black;
+  color: $white;
   z-index: 3;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  top: 0px;
-  left: 0px;
   .particles {
     position: absolute;
     height: 100%;
@@ -78,7 +76,6 @@ body{
   }
 }
 .page-banner {
-  padding: 170px 0 200px 0;
   margin: auto;
   text-align: center;
   .hello {
