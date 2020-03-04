@@ -69,3 +69,6 @@ particlesJS('particles-js', {
   },
   retina_detect: true,
 });
+
+
+var scroll = new SmoothScroll('a[href*="#"]');
