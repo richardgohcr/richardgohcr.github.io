@@ -10,7 +10,11 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link href="styles/main.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="shortcut icon" type="image/png" href="assets/images/r-icon.png" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/r-icon.png"
+    />
   </head>
   <body>
     <header class="nav-header-container">
@@ -20,12 +24,12 @@
         </div>
         <nav>
           <ul class="nav-buttons">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#others">Others</a></li>
+            <li><a class="nav-link" href="#home" style="color: #00ADEF;">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#work">Experience</a></li>
+            <li><a class="nav-link" href="#education">Education</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#others">Others</a></li>
           </ul>
         </nav>
       </div>
@@ -55,7 +59,7 @@
       </div>
       <div id="about" class="section-container-white">
         <div class="about-me width-wrapper">
-          <h2 >About Me</h2>
+          <h2>About Me</h2>
           <img
             class="avatar"
             src="assets/images/Selfie_Richard.png"
@@ -177,7 +181,7 @@
         <div class="experience width-wrapper">
           <div class="row">
             <header style="padding:0px">
-              <h2 >My Education Background</h2>
+              <h2>My Education Background</h2>
             </header>
             <ul class="timeline">
               <li>
@@ -226,7 +230,7 @@
       </div>
       <div id="projects" class="section-container-grey">
         <div class="projects width-wrapper">
-          <h2 >My Side Projects</h2>
+          <h2>My Side Projects</h2>
           <div class="row">
             <div class="project-item">
               <h3>Coming Soon...</h3>
@@ -242,7 +246,7 @@
       </div>
       <div id="others" class="section-container-white">
         <div class="projects width-wrapper">
-          <h2 >Other Accomplishments</h2>
+          <h2>Other Accomplishments</h2>
           <div class="row">
             <div class="project-item">
               <img
@@ -290,7 +294,16 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
-      var scroll = new SmoothScroll('a[href*="#"]');
+      const scroll = new SmoothScroll('a[href*="#"]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        
+        link.addEventListener('click', () => {
+          navLinks.forEach(link => link.style.color = '');
+          link.style.color = '#00ADEF';
+          console.log(link.style.color);
+        });
+      });
     </script>
   </body>
 </html>

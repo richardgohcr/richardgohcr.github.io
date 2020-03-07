@@ -70,5 +70,12 @@ particlesJS('particles-js', {
   retina_detect: true,
 });
 
-
-var scroll = new SmoothScroll('a[href*="#"]');
+//Styling of nav links color
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.forEach(link => (link.style.color = ''));
+    link.style.color = '#00ADEF';
+    console.log(link.style.color);
+  });
+});
