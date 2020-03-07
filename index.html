@@ -295,15 +295,6 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
       const scroll = new SmoothScroll('a[href*="#"]');
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        
-        link.addEventListener('click', () => {
-          navLinks.forEach(link => link.style.color = '');
-          link.style.color = '#00ADEF';
-          console.log(link.style.color);
-        });
-      });
     </script>
   </body>
 </html>

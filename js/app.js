@@ -76,6 +76,5 @@ navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navLinks.forEach(link => (link.style.color = ''));
     link.style.color = '#00ADEF';
-    console.log(link.style.color);
   });
 });
