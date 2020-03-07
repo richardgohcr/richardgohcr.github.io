@@ -1,5 +1,5 @@
 // Common buttons
-
+@import '_variables';
 .btn,
 .btn.inverse:hover {
   color: #ffffff;
@@ -12,3 +12,6 @@
   background-color: transparent;
   border-color: inherit;
 }
+
+//Blue button used in landing page
+
