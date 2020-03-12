@@ -218,8 +218,21 @@ body{
 
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
-@media screen and (min-width: 978px) {
+@media screen and (min-width:1024px) {
   .width-wrapper {
     max-width: 978px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+  .width-wrapper {
+    max-width: 768px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .width-wrapper {
+    max-width: 668px;
   }
 }
