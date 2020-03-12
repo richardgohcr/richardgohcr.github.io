@@ -2,6 +2,8 @@
 @import '_typography';
 @import '_common';
 @import '_vendor';
+@import '_navbar';
+@import '_footer';
 
 .width-wrapper {
   margin: auto;
@@ -16,60 +18,6 @@ body{
   width: 100%;
   height: 100%;
   margin: 0;
-}
-
-.nav-header-container {
-  width: 100%;
-  border-bottom: 0.5px solid $primary;
-  
-  position: fixed;
-  background-color: $white;
-  z-index: 5;
-}
-
-.nav-header {
-  margin: auto;
-  padding: 10px 30px;
-  display: flex;
-  justify-content: space-between;
-  color: $dark-grey;
-  text-transform: uppercase;
-  align-items: center;
-
-  .logo, .logo a {
-    font-size: 22px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $dark-grey;
-  }
-  .nav-buttons { //ul
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  .nav-link {
-    padding: 0 15px 0 0;
-    transition: all 0.3s ease 0s;
-    outline: none;
-    text-decoration: none;
-    color: $dark-grey;
-    &:active{
-      color: $primary!important;
-    }
-    &:hover{
-      color: $primary!important;
-    }
-
-  } 
-  a:active{
-    color: $primary!important;
-  }
-  .active{
-      color: $primary!important;
-  }
 }
 
 .page-banner-container {
@@ -259,17 +207,6 @@ body{
     width: 95%;
     height: 300px;
     border-radius: 5px;
-  }
-}
-
-.footer{
-  padding: 3px 0;
-  color: $white;
-  background-color: $dark-black;
-  text-align: center;
-  a{
-    text-decoration: none;
-    color: $white;
   }
 }
 
