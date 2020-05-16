@@ -1,2 +1,2 @@
-# RichardGohCR
-My Personal Website made in vanilla HTML & CSS
+# RichardGohCR.com V1.0
+The first version of my personal website made entirely from scratch using vanilla HTML & CSS.
