@@ -65,6 +65,10 @@ body{
       color: $white;
     }
   }
+  .cta:hover{
+    color: $white!important;
+    cursor: pointer;
+  }
 }
 
 .section-container-white,
