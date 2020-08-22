@@ -200,8 +200,14 @@ body{
 
 }
 
-.education-container {
-  background-color: $white !important;
+.education {
+  .tech-stack{
+    li{
+      background-color: #e6f7ff;
+      color: $primary;
+      border-color: #91d5ff;
+    }
+  }
 }
 
 .projects {
