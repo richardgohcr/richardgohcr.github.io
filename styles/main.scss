@@ -331,6 +331,14 @@ body {
     .work-header-container {
       flex-direction: column;
     }
+    .tech-stack {
+      flex-wrap: wrap;
+      justify-content: center;
+      li{
+        margin: 2px;
+      }
+      
+    }
   }
   .work-details-container {
     padding: 0px;
