@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-body{
+body {
   height: 100vh;
   width: 100%;
   margin: 0;
@@ -24,7 +24,7 @@ body{
   height: 100vh;
   max-height: 800px;
   width: 100%;
-  display: flex; 
+  display: flex;
   align-items: center;
   background-color: $dark-black;
   color: $white;
@@ -60,13 +60,13 @@ body{
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: 400;
-    a{
+    a {
       text-decoration: none;
       color: $white;
     }
   }
-  .cta:hover{
-    color: $white!important;
+  .cta:hover {
+    color: $white !important;
     cursor: pointer;
   }
 }
@@ -112,7 +112,7 @@ body{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
   }
-  .cta{
+  .cta {
     display: inline-block;
     margin-top: 30px;
     padding: 10px 18px;
@@ -122,11 +122,10 @@ body{
     color: $white;
     border: 1px solid $primary;
     text-decoration: none;
-    &:hover{
+    &:hover {
       color: $primary;
     }
   }
-
 }
 
 .experience {
@@ -146,6 +145,7 @@ body{
   }
   ul.timeline > li {
     margin: 20px 0;
+    cursor: pointer;
   }
   ul.timeline > li:before {
     content: ' ';
@@ -158,6 +158,9 @@ body{
     width: 20px;
     height: 20px;
     z-index: 4;
+  }
+  ul.timeline > li:hover::before {
+    background-color: $light-blue;
   }
   .work-header-container {
     display: flex;
@@ -174,7 +177,7 @@ body{
     font-weight: normal;
     font-style: italic;
   }
-  .work-description {
+  .work-details-container {
     margin-left: 5px;
     margin-top: 0px;
     line-height: 1.5em;
@@ -183,9 +186,9 @@ body{
     display: flex;
     list-style: none;
     padding-left: 15px;
-    margin-bottom: 5px ;
+    margin-bottom: 5px;
     margin-top: 0px;
-  
+
     li {
       font-size: 12px;
       border: 1px solid $primary;
@@ -195,17 +198,29 @@ body{
       margin: 0 2px;
       min-width: 10px;
       padding: 0 4px;
+      cursor: default;
+      &:hover {
+        background-color: $light-blue;
+        color: white;
+      }
     }
   }
-
+  .work-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    .collapsed{
+      max-height: 20px;
+    }
+  }
 }
 
 .education {
-  .tech-stack{
-    li{
+  .tech-stack {
+    li {
       background-color: #e6f7ff;
       color: $primary;
-      border-color: #91d5ff;
+      border-color: $light-blue;
     }
   }
 }
@@ -247,18 +262,16 @@ body{
 
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .width-wrapper {
     max-width: 978px;
   }
 }
 
-
-@media screen and (min-width:768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .width-wrapper {
     max-width: 768px;
   }
-
 }
 
 //Tablets
@@ -266,72 +279,70 @@ body{
   .width-wrapper {
     max-width: 668px;
   }
-  .projects{
-    .row{
+  .projects {
+    .row {
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
     }
-    .project-item{
+    .project-item {
       width: 425px;
     }
   }
 
-  .experience{
-    .work-header-container{
+  .experience {
+    .work-header-container {
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
   }
-  .work-description{
+  .work-details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding-left: 80px;
     padding-right: 80px;
-    li{
+    li {
       padding: 5px 0px;
       list-style: none;
     }
   }
 }
 
-//Phones 
+//Phones
 @media screen and (max-width: 426px) {
-  h2{
+  h2 {
     font-size: 1.5rem;
   }
-  .width-wrapper{
+  .width-wrapper {
     max-width: 325px;
   }
-  .page-banner{
+  .page-banner {
     padding: 80px 0;
     font-size: 16px;
-    .welcome{
-      font-size: 2.0em;
+    .welcome {
+      font-size: 2em;
     }
   }
 
-  .experience{
-    .work-header-container{
+  .experience {
+    .work-header-container {
       flex-direction: column;
     }
   }
-  .work-description{
+  .work-details-container {
     padding: 0px;
   }
-  .projects{
-    .row{
+  .projects {
+    .row {
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
     }
-    .project-item{
+    .project-item {
       width: 90%;
     }
   }
-
 }
-

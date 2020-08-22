@@ -72,9 +72,9 @@ particlesJS('particles-js', {
 
 //Styling of nav links color
 const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    navLinks.forEach(link => (link.style.color = ''));
+    navLinks.forEach((link) => (link.style.color = ''));
     link.style.color = '#00ADEF';
   });
 });
@@ -94,8 +94,9 @@ const navSlide = () => {
       if (link.style.animation) {
         link.style.animation = '';
       } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
-          0.3}s`;
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.3
+        }s`;
       }
     });
     burger.classList.toggle('toggle');
@@ -109,7 +110,7 @@ const selectLink = () => {
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
 
-  navLinks.forEach(link =>
+  navLinks.forEach((link) =>
     link.addEventListener('click', () => {
       burger.classList.toggle('toggle');
       nav.classList.toggle('nav-active');
@@ -117,7 +118,7 @@ const selectLink = () => {
       //Remove link animations
 
       setTimeout(() => {
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
           link.style.animation = '';
         });
       }, 500);
@@ -126,3 +127,17 @@ const selectLink = () => {
 };
 
 selectLink();
+
+
+//Accordion effect for timeline
+const timePoints = document.querySelectorAll('.timeline>li');
+timePoints.forEach((timePoint) => {
+  timePoint.addEventListener('click', () => {
+    const workDescript = timePoint.querySelector('.work-description');
+    if (workDescript.style.maxHeight) {
+      workDescript.style.maxHeight = null;
+    } else {
+      workDescript.style.maxHeight = workDescript.scrollHeight + "px";
+    }
+  });
+});
