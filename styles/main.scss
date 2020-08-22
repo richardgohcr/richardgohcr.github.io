@@ -152,9 +152,9 @@ body{
     background: white;
     display: inline-block;
     position: relative;
-    margin-left: -15px;
+    margin-left: -10px;
     border-radius: 50%;
-    border: 3px solid $primary;
+    border: 1px solid $primary;
     width: 20px;
     height: 20px;
     z-index: 4;
@@ -162,7 +162,6 @@ body{
   .work-header-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
     margin-top: -25px;
     margin-left: 15px;
   }
@@ -180,8 +179,25 @@ body{
     margin-top: 0px;
     line-height: 1.5em;
   }
-  .work-description-sub {
+  .tech-stack {
+    display: flex;
+    list-style: none;
+    padding-left: 15px;
+    margin-bottom: 5px ;
+    margin-top: 0px;
+  
+    li {
+      font-size: 12px;
+      border: 1px solid $primary;
+      background-color: white;
+      color: $primary;
+      border-radius: 6px;
+      margin: 0 2px;
+      min-width: 10px;
+      padding: 0 4px;
+    }
   }
+
 }
 
 .education-container {
